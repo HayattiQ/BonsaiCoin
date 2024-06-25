@@ -124,6 +124,12 @@ module.exports = {
             chainId: 56,
             accounts: accounts(),
         },
+        astarzkevm: {
+            url: "https://rpc.startale.com/astar-zkevm",
+            chainId: 3776,
+            accounts: accounts(),
+        },
+
         avalanche: {
             url: "https://api.avax.network/ext/bc/C/rpc",
             chainId: 43114,

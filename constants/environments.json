@@ -2,7 +2,7 @@
   "mainnet": [
     "ethereum",
     "bsc",
-    "avalanche",
+    "astarzkevm",
     "polygon",
     "arbitrum",
     "optimism",
