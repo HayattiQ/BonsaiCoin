@@ -1,1 +1,5 @@
-npx hardhat verify --network sepolia --contract contracts/token/oft/v2/mocks/BonsaiCoin.sol:BonsaiCoin 0x2E868Eb6b1E300b45492ab262B87aab9FDa08412 0x6EDCE65403992e310A62460808c4b910D972f10f 803100000000000000000000000000000 18
+npx hardhat verify --network arbitrum --contract contracts/token/oft/v2/mocks/BonsaiCoin.sol:BonsaiCoin \
+0xBd5166Ac59ef3Abae8d1007a099bCe5A7A927B46 \
+0x3c2269811836af69497E5F486A85D7316753cf62 \
+0 \
+18

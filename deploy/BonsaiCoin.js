@@ -8,7 +8,8 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
 
     const lzEndpointAddress = LZ_ENDPOINTS[hre.network.name]
     console.log(`[${hre.network.name}] Endpoint Address: ${lzEndpointAddress}`)
-    const globalSupply = ethers.utils.parseUnits("803100000000000", 18)
+//    const globalSupply = ethers.utils.parseUnits("803100000000000", 18)
+    const globalSupply = 0
     const sharedDecimals = 18
     console.log(lzEndpointAddress,globalSupply,sharedDecimals)
 

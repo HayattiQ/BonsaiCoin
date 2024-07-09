@@ -1,0 +1,1 @@
+npx hardhat --network astarzkevm oftv2Send --target-network arbitrum --qty 1 --contract BonsaiCoin

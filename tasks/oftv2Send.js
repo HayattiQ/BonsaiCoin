@@ -5,7 +5,7 @@ module.exports = async function (taskArgs, hre) {
     let owner = signers[0]
     let toAddress = owner.address
     let qty = ethers.utils.parseEther(taskArgs.qty)
-
+    console.log("send start")
     let localContract, remoteContract
 
     if (taskArgs.contract) {
@@ -14,7 +14,7 @@ module.exports = async function (taskArgs, hre) {
     } else {
         localContract = taskArgs.localContract
         remoteContract = taskArgs.remoteContract
-    }
+    }   
 
     if (!localContract || !remoteContract) {
         console.log("Must pass in contract name OR pass in both localContract name and remoteContract name")
@@ -31,10 +31,12 @@ module.exports = async function (taskArgs, hre) {
 
     // quote fee with default adapterParams
     let adapterParams = ethers.utils.solidityPack(["uint16", "uint256"], [1, 200000]) // default adapterParams example
+    console.log("estimate fee", remoteChainId, toAddressBytes, qty, adapterParams, localContractInstance.address)
+
 
     let fees = await localContractInstance.estimateSendFee(remoteChainId, toAddressBytes, qty, false, adapterParams)
     console.log(`fees[0] (wei): ${fees[0]} / (eth): ${ethers.utils.formatEther(fees[0])}`)
-
+  
     let tx = await (
         await localContractInstance.sendFrom(
             owner.address, // 'from' address to send tokens

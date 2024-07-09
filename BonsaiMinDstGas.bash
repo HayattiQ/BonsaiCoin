@@ -1,0 +1,1 @@
+npx hardhat --network astarzkevm setMinDstGas --packet-type 0 --target-network arbitrum --contract BonsaiCoin --min-gas 200000
